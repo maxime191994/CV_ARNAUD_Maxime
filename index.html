@@ -25,9 +25,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">À propos de moi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Compétences</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#experience">Expériences</a>
                     </li>
@@ -256,9 +254,41 @@
             </ul>
         </div>
     </section>
+    <script>
+      // Lorsque le document est prêt
+      document.addEventListener("DOMContentLoaded", function () {
+          // Affiche/masque le bouton en fonction du défilement
+          window.onscroll = function () {
+              scrollFunction();
+          };
+  
+          // Fonction pour afficher/masquer le bouton
+          function scrollFunction() {
+              var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  scrollToTopBtn.style.display = "block";
+              } else {
+                  scrollToTopBtn.style.display = "none";
+              }
+          }
+  
+          // Lorsque le bouton est cliqué, faites défiler vers le haut en douceur
+          document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth' // Défilement en douceur
+              });
+          });
+      });
+  </script>
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
+    <!-- Bouton de retour en haut de la page -->
+<button id="scrollToTopBtn" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
 </body>
 </html>

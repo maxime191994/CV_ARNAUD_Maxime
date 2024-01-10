@@ -105,3 +105,19 @@ i.fab.fa-linkedin-in:hover {
   color: #5e5e5e; /* Définissez la couleur que vous souhaitez pour l'icône LinkedIn ici */
 }
 
+/* Style du bouton de retour en haut */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #acacac;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease; /* Ajout de la transition */
+}
+
